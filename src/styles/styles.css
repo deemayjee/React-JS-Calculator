@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: inherit;
+}
+
+
+:root {
+    --color-blue: #0d0831;
+    --color-light-white: #eee;
+
+    --color-deepblue: #090622;
+    --color-purple-transparent: rgba(88, 24, 69, .6);
+    --color-pink-transparent: rgba(216, 14, 91, .6);
+
+    --color-red: #ff3c00;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-torq: #00ceff;
+    --shadow: rgba(0, 0, 0, .4);
+
+}
+
+.app {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom right, var(--color-pink-transparent), var(--color-purple-transparent)), url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=1200&w=1920);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .calculator {
+    height: 80vh;
+    width: 45%;
+    box-shadow: 0 2rem 4rem var(--shadow);
+    background-color: var(--color-white);
+  }
+
+  .result-screen {
+    height: 19vh;
+    font-size: 8rem;
+    font-weight: 600;
+    /* To display the value at the bottom-right of the container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .computation-screen {
+    height: 6vh;
+    font-size: 2.5rem;
+    
+    /* To display the value at the bottom-right of the container */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 5vh;
+    color: #c9c909;
+  }
+
+  .screen {
+    height: 25vh;
+    width: 100%;
+    padding: 0 2rem;
+    overflow: hidden;
+    white-space: no-wrap;
+    color: var(--color-light-white);
+    background-color: var(--color-deepblue);
+  }
+
+  .keypad__row {
+    height: 11vh; /* (80vh calculator - 25vh screen) / 5 keypadRow components = 11vh */
+    width: 100%;
+    display: flex; /* To control the dimension */
+    color: white;
+  }
+
+  .keypad {
+    height: 55vh;
+    width: 100%;
+  }
+
+  .btn {
+    width: 25%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: inherit;
+    background-color: var(--color-blue);
+    border: 1px solid transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    color: #fff;
+  }
+
+  .btn:hover {
+    color: var(--color-torq);
+    background-color: var(--color-deepblue);
+  }
+
+  .btn:active {
+    transform: scale(.95);
+  }
+
+
+  .btn--large {
+    width: 50%;
+    color: #fff;
+    transition: all .2s;
+  }
+
+  .btn--large:hover {
+    background-color: var(--color-blue);
+    color: var(--color-torq);
+
+  }
+
+  .btn--yellow {
+    width: 25%;
+    height: 100%;
+    font-size: 3rem;
+    font-family: inherit;
+    background-color: var(--color-blue);
+    border: 1px solid transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    color: #c9c909;
+  }
